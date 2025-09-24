@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+:root {
+	--color-light: hsl(0, 0%, 90%);
+	--color-dark: hsl(0, 0%, 15%);
+	--foreground: var(--color-light);
+	--background: var(--color-dark);
+	--background-secondary: hsl(0, 0%, 10%);
+	--color-hot-pink: #ff0069;
+	--color-violet: #8800ff;
+	--color-mint: #00FFAA;
+	--color-sky: #00AAFF;
+
+	--gaps: 1em;
+	--radius: var(--gaps);
+	--accent: var(--color-mint);
+}
+
+/* make the displayed page take 100% of the viewport, responding to height
+   changes such as the searchbar in mobile web browsers.
+*/
+html {
+	height: 100dvh;
+}
+
+/* Utility */
+.animate {
+	transition: all .33s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------------------------------------- */
+
+body {
+	font-family: 'Martian Mono', monospace;
+	color: var(--foreground);
+	background-color: var(--background-secondary);
+	/* min-height: 100vh; */
+	height: 100%;
+	margin: 0;
+	padding: 0 var(--gaps);
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: calc(var(--gaps) * 3);
+	gap: 1em;
+	padding: var(--gaps) 0;
+
+	a {
+		text-decoration: none;
+		font-weight: 900;
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+	}
+
+	.left .logo {
+		width: calc(var(--gaps) * 3);
+		height: calc(var(--gaps) * 3);
+		/* background-color: var(--color-mint); */
+		background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
+		border-radius: 100vh;
+
+		&:hover {
+			transform: rotate(.5turn);
+		}
+
+		/* transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); */
+	}
+
+	.right {
+		display: flex;
+		align-items: stretch;
+		gap: var(--gaps);
+		height: 100%;
+
+		.nav-link {
+			color: var(--accent);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100vh;
+
+			/* transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); */
+
+			&:hover {
+				color: var(--background-secondary);
+				background-color: var(--accent);
+			}
+
+			&:nth-of-type(1) {
+				--accent: var(--color-hot-pink)
+			}
+
+			&:nth-of-type(2) {
+				--accent: var(--color-sky)
+			}
+
+			&:nth-of-type(3) {
+				--accent: var(--color-mint)
+			}
+
+			&:nth-of-type(4) {
+				--accent: var(--color-violet)
+			}
+
+			a {
+				padding: 100% var(--gaps)
+			}
+		}
+	}
+}
+
+
+main {
+	flex-grow: 1;
+	background-color: var(--background);
+	padding: var(--gaps);
+	border-radius: var(--radius);
+	height: auto;
+
+	a {
+		color: var(--color-mint);
+
+		&:visited {
+			text-decoration: none;
+			color: var(--color-mint);
+
+			&:hover {
+				color: var(--color-hot-pink);
+			}
+		}
+	}
+}
+
+footer {
+	/* margin-top: auto; */
+	padding: var(--gaps);
+	text-align: center;
+}
+
+/* Boxes */
+
+.container .item {
+	color: var(--background);
+	background-color: var(--color-sky);
+
+	p {
+		text-align: center;
+
+	}
+}
+
+main .container {
+
+	display: flex;
+	gap: 1em;
+
+	& .item {
+		display: inline-block;
+		width: 10em;
+		height: 10em;
+	}
+}
+
+/* misc */
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+img.spin {
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
