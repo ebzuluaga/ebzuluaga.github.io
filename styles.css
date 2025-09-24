@@ -3,13 +3,13 @@
 :root {
 	--color-light: hsl(0, 0%, 90%);
 	--color-dark: hsl(0, 0%, 15%);
-	--foreground: var(--color-light);
-	--background: var(--color-dark);
-	--background-secondary: hsl(0, 0%, 10%);
 	--color-hot-pink: #ff0069;
 	--color-violet: #8800ff;
 	--color-mint: #00FFAA;
 	--color-sky: #00AAFF;
+	--foreground: var(--color-light);
+	--background: var(--color-dark);
+	--background-secondary: hsl(0, 0%, 10%);
 
 	--gaps: 1em;
 	--radius: var(--gaps);
@@ -50,20 +50,9 @@ body {
 	gap: 1em;
 	padding: var(--gaps) 0;
 
-	a {
-		text-decoration: none;
-		font-weight: 900;
-		color: inherit;
-
-		&:visited {
-			color: inherit;
-		}
-	}
-
 	.left .logo {
 		width: calc(var(--gaps) * 3);
 		height: calc(var(--gaps) * 3);
-		/* background-color: var(--color-mint); */
 		background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
 		border-radius: 100vh;
 
@@ -88,6 +77,19 @@ body {
 			border-radius: 100vh;
 
 			/* transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); */
+
+			a {
+				text-decoration: none;
+				font-weight: 900;
+				color: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
 
 			&:hover {
 				color: var(--background-secondary);
@@ -124,19 +126,6 @@ main {
 	padding: var(--gaps);
 	border-radius: var(--radius);
 	height: auto;
-
-	a {
-		color: var(--color-mint);
-
-		&:visited {
-			text-decoration: none;
-			color: var(--color-mint);
-
-			&:hover {
-				color: var(--color-hot-pink);
-			}
-		}
-	}
 }
 
 footer {
@@ -145,20 +134,31 @@ footer {
 	text-align: center;
 }
 
-/* Boxes */
 
+a {
+	color: var(--color-mint);
+	text-decoration: none;
+
+	&:visited {
+		color: var(--color-mint);
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: var(--color-hot-pink);
+	}
+}
+
+/* Boxes */
 .container .item {
 	color: var(--background);
 	background-color: var(--color-sky);
-
 	p {
 		text-align: center;
-
 	}
 }
 
 main .container {
-
 	display: flex;
 	gap: 1em;
 
@@ -175,7 +175,6 @@ main .container {
 	from {
 		transform: rotate(0deg);
 	}
-
 	to {
 		transform: rotate(360deg);
 	}
