@@ -113,7 +113,7 @@ body {
 			}
 
 			a {
-				padding: 100% var(--gaps)
+				padding: var(--gaps)
 			}
 		}
 	}
