@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Boxes</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="left"><div class="logo animate"></div></div>
+        <div class="right">
+			<div class="nav-link animate"><a href="./index.html">Homepage</a></div>
+			<div class="nav-link animate"><a href="./boxes.html">Box</a></div>
+			<div class="nav-link animate"><a href="./colors.html">Colors</a></div>
+			<div class="nav-link animate"><a href="#">Foo</a></div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Boxes</h1>
+        <div id="box-container">
+            <!-- some code here later -->
+        </div>
+    </main>
+    <footer>
+        Made by Me
+    </footer>
+
+	<script>
+		// populate the boxes container
+		let str = '' ; const colors = ['mint', 'sky', 'violet', 'mandarine', 'pink']
+		const container = document.querySelector('#box-container')
+		for (c of colors) {
+			str+=`<div id="box_a" class="item animate" color="${c}"><p>${c.replace(c[0], c[0].toUpperCase())}</p></div>\n`
+		}
+		container.innerHTML = str
+		/*
+			<div id="box_a" class="item animate" color="mint"><p>Mint</p></div>	
+            <div id="box_b" class="item animate" color="sky"><p>Sky</p></div>
+            <div id="box_c" class="item animate" color="violet"><p>Violet</p></div>
+            <div id="box_d" class="item animate" color="mandarine"><p>Mandarine</p></div>
+            <div id="box_d" class="item animate" color="pink"><p>Pink</p></div>
+		*/
+	</script>
+</body>
+
+</html>

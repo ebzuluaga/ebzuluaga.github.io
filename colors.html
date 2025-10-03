@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" />
+	<title>Boxes</title>
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="left">
+			<div class="logo animate"></div>
+		</div>
+		<div class="right">
+			<div class="nav-link animate"><a href="/index.html">Homepage</a></div>
+			<div class="nav-link animate"><a href="/boxes.html">Box</a></div>
+			<div class="nav-link animate"><a href="/colors.html">Colors</a></div>
+			<div class="nav-link animate"><a href="#">Foo</a></div>
+		</div>
+	</nav>
+
+	<main>
+		<h1>Colors</h1>
+		<div id="colors-container">
+			<div>
+				<div class="slot">1</div><div class="slot">2</div><div class="slot">3</div>
+			</div>
+			<div>
+				<div class="slot">4</div><div class="slot">5</div><div class="slot">6</div>
+			</div>
+			<div>
+				<div class="slot">7</div><div class="slot">8</div><div class="slot">9</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		Made by Me
+	</footer>
+	<script>
+		const arr = "0123456789ABCDEF".split('')
+		let str = ''
+		for (let i = 0; i < arr.length; i++) {
+			const element_1 = arr[i];
+			for (let j = 0; j < arr.length; j++) {
+				const element_2 = arr[j];
+				for (let k = 0; k < arr.length; k++) {
+					const element_3 = arr[k];
+					str+=(' '+element_1+element_2+element_3);
+					// str+=' '
+				}			
+				// str+='\n'
+			}
+			// str+='***************************************************************\n'
+		}
+		const container = document.querySelector("#colors-container")
+		let bigstr = '';
+		let colors = str.split(' ')
+		console.log(bigstr);
+		for (let i = 1; i < colors.length; i++) {
+			const color = colors[i];
+			bigstr+=`<div style="display: inline-block; width: 16px; height: 16px; background-color: #${color};"></div>`
+		}
+		container.innerHTML=bigstr
+		</script>
+</body>
+
+</html>
