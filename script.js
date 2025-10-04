@@ -3,5 +3,5 @@
 
 function toggleLorem() {
 	const lorem = document.querySelector("#lorem-ipsum")
-	lorem.hidden = !lorem.hidden
+	lorem && ( lorem.hidden = !lorem.hidden )
 }
