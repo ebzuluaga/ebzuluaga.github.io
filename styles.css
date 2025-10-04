@@ -82,12 +82,14 @@ body {
 			&:hover { 
 				background-color: var(--accent);
 				color: var(--background);
+				cursor: pointer;
 			}
 			&:active {
 				background-color: var(--color-hot-pink);
 				transition: none;
 			}
 			button {
+				cursor: inherit;
 				color: inherit;
 				background-color: transparent;
 				font-size: 1rem;
