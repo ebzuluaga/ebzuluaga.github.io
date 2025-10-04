@@ -33,7 +33,6 @@ body {
 	font-family: 'Martian Mono', monospace;
 	color: var(--foreground);
 	background-color: var(--background-secondary);
-	/* min-height: 100vh; */
 	height: 100%;
 	margin: 0;
 	padding: 0 var(--gaps);
@@ -107,8 +106,6 @@ body {
 			align-items: center;
 			border-radius: 100vh;
 
-			/* transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); */
-			
 			a {
 				text-decoration: none;
 				font-weight: 900;
@@ -165,7 +162,6 @@ main {
 }
 
 footer {
-	/* margin-top: auto; */
 	padding: var(--gaps);
 	text-align: center;
 }
@@ -235,7 +231,6 @@ a {
 /* Colors */
 
 main #colors-container {
-	/* font-size: 5rem; */
 	line-height: 0;
 	& > div {
 		.slot {
