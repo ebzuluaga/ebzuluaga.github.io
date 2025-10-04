@@ -1,9 +1,10 @@
 document.querySelectorAll("[data-include]").forEach(e => {
-	fetch(`/partials/${e.dataset.include}.html`)
+	const url = `/partials/${e.dataset.include}.html`
+	fetch(url)
 		.then(res => res.text())
 		.then(text => {
 			e.outerHTML = text
 		}).catch(err => {
-			console.log(`ERROR WHILE FETCHING /partials/${e.dataset.include}.html\n` + err)
+			console.log(`ERROR WHILE FETCHING ${url}\n` + err)
 		})
 })
