@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="styles.css" rel="stylesheet">
-	<script defer src="/script.js"></script>
+	<script defer src="./script.js"></script>
+	<script defer src="./include.js"></script>
 	<title>Index</title>
 </head>
 
 <body>
 
-	<nav id="top-nav-bar" class="navbar"></nav>
+	<div data-include="navbar"></div>
 	<main>
 		<h1>Hi I'm Esteban</h1>
 		<p>I'm a <em>Systems (and telecomunications) Engineer</em>, and an aspiring software developer/sysadmin</p>
@@ -27,7 +28,7 @@
 			<li><a target="_blank" href="https://github.com/estebanbedoyazuluaga/mvc-demo">Simple toy app for showing the MVC design pattern</a></li>
 		</ul>
 
-		<p hidden> Are you reading this? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero doloribus ea dicta nostrum sequi,
+		<p id="lorem-ipsum" hidden> Are you reading this? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero doloribus ea dicta nostrum sequi,
 			sapiente accusamus cumque eveniet, magni laborum ullam unde impedit dolorum sit aliquid tempora. Iusto
 			excepturi nihil soluta fugit cumque quod exercitationem modi repudiandae? Odio distinctio quam modi est
 			explicabo vero delectus illo aspernatur, dolores numquam. Optio facere praesentium, possimus esse deleniti
@@ -65,5 +66,5 @@
 			non numquam ratione incidunt delectus eos molestiae. Saepe, iusto odio.</p>
 
 	</main>
-	<footer id="footer"></footer>
+	<div data-include="footer"></div>
 </body>
