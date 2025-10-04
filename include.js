@@ -1,3 +1,5 @@
+// I REALLY should just set up an SSG, I'm putting it off untill it's absolutely
+// necessary, please don't judge me
 document.querySelectorAll("[data-include]").forEach(e => {
 	const url = `/partials/${e.dataset.include}.html`
 	fetch(url)
