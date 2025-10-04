@@ -55,29 +55,51 @@ body {
 	gap: 1em;
 	padding: var(--gaps) 0;
 
-	.left {
-		display: flex;
-		gap: var(--gaps);
+	.left .logo {
+		width: calc(var(--gaps) * 3);
+		height: calc(var(--gaps) * 3);
+		background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
+		border-radius: 100vh;
 
-		.logo {
-			width: calc(var(--gaps) * 3);
-			height: calc(var(--gaps) * 3);
-			background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
-			border-radius: 100vh;
-
-			&:hover {
-				transform: rotate(.5turn);
-				background: linear-gradient(.375turn, var(--color-hot-pink) 0%, var(--color-sky));
-			}
+		&:hover {
+			transform: rotate(.5turn);
+			background: linear-gradient(.375turn, var(--color-hot-pink) 0%, var(--color-sky));
 		}
 	}
+	
 
 	.left , .right {
 		display: flex;
 		align-items: stretch;
 		gap: var(--gaps);
 		height: 100%;
-
+		
+		.nav-btn {
+			color: var(--accent);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0.5rem;
+			&:hover { 
+				background-color: var(--accent);
+				color: var(--background);
+			}
+			&:active {
+				background-color: var(--color-hot-pink);
+				transition: none;
+			}
+			button {
+				color: inherit;
+				background-color: transparent;
+				font-size: 1rem;
+				font-family: 'Martian Mono', monospace;
+				font-weight: 900;
+				padding: 0;
+				border: none;
+				&::before { content: "[ " }
+				&::after { content: " ]" }
+			}
+		}
 		.nav-link {
 			color: var(--accent);
 			display: flex;
@@ -214,6 +236,7 @@ a {
 
 main #colors-container {
 	/* font-size: 5rem; */
+	line-height: 0;
 	& > div {
 		.slot {
 			display: inline-block;
