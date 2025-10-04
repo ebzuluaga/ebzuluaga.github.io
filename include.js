@@ -5,6 +5,6 @@ document.querySelectorAll("[data-include]").forEach(e => {
 		.then(text => {
 			e.outerHTML = text
 		}).catch(err => {
-			console.log(`ERROR WHILE FETCHING ${url}\n` + err)
+			console.log(`ERROR WHILE FETCHING: ${url}\n` + err)
 		})
 })
