@@ -25,15 +25,17 @@
 html {
 	height: 100dvh;
 }
-
+body {
+	height: 100%;
+}
 
 /* ---------------------------------------- */
 
 body {
 	font-family: 'Martian Mono', monospace;
+	font-size: 1rem;
 	color: var(--foreground);
 	background-color: var(--background-secondary);
-	height: 100%;
 	margin: 0;
 	padding: 0 var(--gaps);
 	display: flex;
@@ -254,6 +256,23 @@ main #colors-container {
 	to {
 		transform: rotate(360deg);
 	}
+}
+@keyframes blink {
+	100% { background-color: transparent }
+}	
+
+main {
+	position: relative;
+}
+#blinking-dot {
+	position: absolute;
+	top: var(--gaps);
+	left: var(--gaps);	
+	border-radius: 50%;
+	height: calc(var(--gaps) / 1.5);
+	width: calc(var(--gaps) / 1.5);
+	background-color: var(--foreground);
+	animation: 0.5s blink infinite;
 }
 
 img.spin {

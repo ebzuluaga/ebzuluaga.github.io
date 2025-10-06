@@ -1,4 +1,7 @@
 function toggleLorem() {
 	const lorem = document.querySelector("#lorem-ipsum")
-	lorem && ( lorem.hidden = !lorem.hidden )
+	if (lorem) { lorem.hidden = !lorem.hidden }
+}
+function print_viewport() {
+	console.log("%O", window.visualViewport)
 }
