@@ -45,7 +45,6 @@ body {
 /* Utility */
 .animate {
 	transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
-	/* transition-property: color,background-color,outline,border; */
 }
 
 .navbar {
@@ -186,66 +185,6 @@ a {
 	}
 }
 
-/* Boxes */
-
-#boxes-container {
-	display: flex;
-	gap: 1em;
-	line-height: 0;
-	.item {
-		display: inline-block;
-		width: 10em;
-		height: 10em;
-
-		color: var(--background);
-		border-radius: var(--gaps);
-		background-color: var(--accent);
-		user-select: none;
-
-		&:active {
-			outline: 0.2rem solid var(--accent);
-			color: var(--accent);
-			background-color: var(--background);
-		}
-
-		&[color="mint"] {
-			--accent: var(--color-mint)
-		}
-		
-		&[color="sky"] {
-			--accent: var(--color-sky)
-		}
-		
-		&[color="violet"] {
-			--accent: var(--color-violet)
-		}
-		
-		&[color="mandarine"] {
-			--accent: var(--color-mandarine)
-		}
-		&[color="pink"] {
-			--accent: var(--color-hot-pink)
-		}
-		p {
-			text-align: center;
-		}
-	}
-}
-
-
-/* Colors */
-
-main #colors-container {
-	line-height: 0;
-	& > div {
-		.slot {
-			display: inline-block;
-			background-color: var(--foreground);
-			color: var(--background);
-		}
-	}
-}
-
 /* misc */
 
 @keyframes rotate {
@@ -256,23 +195,6 @@ main #colors-container {
 	to {
 		transform: rotate(360deg);
 	}
-}
-@keyframes blink {
-	100% { background-color: transparent }
-}	
-
-main {
-	position: relative;
-}
-#blinking-dot {
-	position: absolute;
-	top: var(--gaps);
-	left: var(--gaps);	
-	border-radius: 50%;
-	height: calc(var(--gaps) / 1.5);
-	width: calc(var(--gaps) / 1.5);
-	background-color: var(--foreground);
-	animation: 0.5s blink infinite;
 }
 
 img.spin {

@@ -1,0 +1,20 @@
+@import url("/styles.css");
+
+@keyframes blink {
+	100% { background-color: transparent }
+}	
+
+main {
+	position: relative;
+}
+
+#blinking-dot {
+	position: absolute;
+	top: var(--gaps);
+	left: var(--gaps);	
+	border-radius: 50%;
+	height: calc(var(--gaps) / 1.5);
+	width: calc(var(--gaps) / 1.5);
+	background-color: var(--foreground);
+	animation: 0.5s blink infinite;
+}

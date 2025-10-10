@@ -1,0 +1,46 @@
+/* common stylesheet */
+@import url("/styles.css");
+
+#boxes-container {
+	display: flex;
+	gap: 1em;
+	line-height: 0;
+	.item {
+		display: inline-block;
+		width: 10em;
+		height: 10em;
+
+		color: var(--background);
+		border-radius: var(--gaps);
+		background-color: var(--accent);
+		user-select: none;
+
+		&:active {
+			outline: 0.2rem solid var(--accent);
+			color: var(--accent);
+			background-color: var(--background);
+		}
+
+		&[color="mint"] {
+			--accent: var(--color-mint)
+		}
+		
+		&[color="sky"] {
+			--accent: var(--color-sky)
+		}
+		
+		&[color="violet"] {
+			--accent: var(--color-violet)
+		}
+		
+		&[color="mandarine"] {
+			--accent: var(--color-mandarine)
+		}
+		&[color="pink"] {
+			--accent: var(--color-hot-pink)
+		}
+		p {
+			text-align: center;
+		}
+	}
+}
