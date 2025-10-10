@@ -14,7 +14,7 @@
 	--background: var(--color-dark);
 	--background-secondary: hsl(0, 0%, 10%);
 
-	--gaps: 1em;
+	--gaps: 1rem;
 	--radius: var(--gaps);
 	--accent: var(--color-mint);
 }
