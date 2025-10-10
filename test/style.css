@@ -13,8 +13,14 @@ main {
 	top: var(--gaps);
 	left: var(--gaps);	
 	border-radius: 50%;
-	height: calc(var(--gaps) / 1.5);
-	width: calc(var(--gaps) / 1.5);
-	background-color: var(--foreground);
+	min-height: calc(var(--gaps) / 1.5);
+	min-width: calc(var(--gaps) / 1.5);
+	background-color: var(--color-mint);
 	animation: 0.5s blink infinite;
+	&+span {
+		position: absolute;
+		margin-left:  calc(var(--gaps) * 2); 
+		font-size: calc(var(--gaps) / 2);
+		color: var(--color-mint);
+	}
 }
