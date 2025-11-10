@@ -44,6 +44,7 @@ body {
 
 /* Utility */
 .animate {
+	/* transition: all 200ms ease; */
 	transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -152,6 +153,14 @@ body {
 	}
 }
 
+@media (max-width: 850px) {
+	/* .nav-link, .nav-btn {
+		display: none
+	} */
+	.left > :not(.logo) { 
+		display: none;
+	}
+}
 
 main {
 	flex-grow: 1;
