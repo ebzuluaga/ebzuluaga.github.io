@@ -30,13 +30,10 @@
 				})
 			})
 		})
-		
-		let bigstr = ''
-		// 4096 iterations!
-		colors.forEach(color => {
-			bigstr += `<div style="display: inline-block; width: 16px; height: 16px; background-color: #${color};"></div>`
-		})
-		document.querySelector("#colors-container").innerHTML = bigstr
+		document.querySelector("#colors-container").innerHTML = colors.reduce(
+			(str,color) => { 
+				return str + `<div style="display:inline-block; width:16px; height:16px; background-color:#${color}"></div>`
+			}, '')
 	</script>
 </body>
 
