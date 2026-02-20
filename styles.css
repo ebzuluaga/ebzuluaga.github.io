@@ -52,10 +52,13 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: calc(var(--gaps) * 3);
+	min-height: calc(var(--gaps) * 3);
 	gap: 1em;
 	padding: var(--gaps) 0;
 
+	overflow-x: auto;
+	scrollbar-width: none;
+	
 	.left .logo {
 		width: calc(var(--gaps) * 3);
 		height: calc(var(--gaps) * 3);
