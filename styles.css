@@ -156,15 +156,6 @@ body {
 	}
 }
 
-@media (max-width: 850px) {
-	/* .nav-link, .nav-btn {
-		display: none
-	} */
-	.left > :not(.logo) { 
-		display: none;
-	}
-}
-
 main {
 	flex-grow: 1;
 	background-color: var(--background);
