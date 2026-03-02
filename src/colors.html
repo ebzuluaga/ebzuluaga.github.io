@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+<h1>Colors</h1>
+<div id="colors-container"></div>
+<script>
+    const chars = "0123456789ABCDEF".split('');
+    const colors = [];
+    chars.forEach(e => {
+        chars.forEach(ee => {
+            chars.forEach(eee => {
+                colors.push('' + e + ee + eee);
+            })
+        })
+    })
+    document
+        .querySelector("#colors-container")
+        .innerHTML = colors.reduce((str, color) => {
+        return str +
+                `<div style="display:inline-block; width:16px; height:16px; background-color:#${color}"></div>`
+    }, '')
+</script>

@@ -1,0 +1,222 @@
+/* FONTS: Martian Mono, Roboto Condensed, Roboto Serif */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+:root {
+	--color-light: hsl(0, 0%, 90%);
+	--color-dark: hsl(0, 0%, 15%);
+	--color-hot-pink: #ff0077;
+	--color-violet: #9900ff;
+	--color-mint: #00FFAA;
+	--color-sky: #00AAFF;
+	--color-mandarine: #FFAA00;
+	/*FA5*/
+	--color-banana: #FFEE00;
+	--foreground: var(--color-light);
+	--background: var(--color-dark);
+	--background-secondary: hsl(0, 0%, 10%);
+	--accent: var(--color-mint);
+
+	--gaps: 1rem;
+	--radius: var(--gaps);
+	--font-sans: 'Roboto Condensed', sans-serif;
+	--font-serif: 'Roboto Serif', serif;
+	--font-mono: 'Martian Mono','Martian Mono', monospace;
+
+	--font-headings: var(--font-serif);
+	--font-default: var(--font-sans);
+}
+
+/* make the displayed page take 100% of the viewport, responding to height
+   changes such as the searchbar in mobile web browsers.
+*/
+html {
+	height: 100dvh;
+}
+body {
+	height: 100%;
+}
+
+/* ---------------------------------------- */
+
+body {
+	font-family: var(--font-default);
+	font-size: 1rem;
+	color: var(--foreground);
+	background-color: var(--background-secondary);
+	margin: 0;
+	padding: 0 var(--gaps);
+	display: flex;
+	flex-direction: column;
+}
+
+pre, code {
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	font-weight: 300;
+}
+/* Utility */
+.animate {
+	/* transition: all 200ms ease; */
+	transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	min-height: calc(var(--gaps) * 3);
+	gap: 1em;
+	padding: var(--gaps) 0;
+
+	overflow-x: auto;
+	scrollbar-width: none;
+
+	.left .logo {
+		width: calc(var(--gaps) * 3);
+		height: calc(var(--gaps) * 3);
+		background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
+		border-radius: 100vh;
+
+		&:hover {
+			transform: rotate(.5turn);
+			background: linear-gradient(.375turn, var(--color-hot-pink) 0%, var(--color-sky));
+		}
+	}
+
+
+	.left , .right {
+		display: flex;
+		align-items: stretch;
+		gap: var(--gaps);
+		height: 100%;
+
+		.nav-btn {
+			color: var(--accent);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0.5rem;
+			&:hover {
+				background-color: var(--accent);
+				color: var(--background);
+				cursor: pointer;
+			}
+			&:active {
+				background-color: var(--color-hot-pink);
+				transition: none;
+			}
+			button {
+				cursor: inherit;
+				color: inherit;
+				background-color: transparent;
+				font-size: 1rem;
+				font-family: var(--font-mono);
+				font-weight: 900;
+				padding: 1rem;
+				border: none;
+				text-wrap: nowrap;
+				/* &::before { content: "[ " } */
+				/* &::after { content: " ]" } */
+			}
+		}
+		.nav-link {
+			color: var(--accent);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100vh;
+
+			a {
+				text-decoration: none;
+				font-family: var(--font-mono);
+				font-weight: 900;
+				color: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			&:hover {
+				color: var(--background-secondary);
+				background-color: var(--accent);
+			}
+
+			&:nth-of-type(1) {
+				--accent: var(--color-hot-pink)
+			}
+
+			&:nth-of-type(2) {
+				--accent: var(--color-sky)
+			}
+
+			&:nth-of-type(3) {
+				--accent: var(--color-mint)
+			}
+
+			&:nth-of-type(4) {
+				--accent: var(--color-violet)
+			}
+
+			a {
+				padding: var(--gaps)
+			}
+		}
+	}
+}
+
+main {
+	flex-grow: 1;
+	background-color: var(--background);
+	padding: var(--gaps);
+	border-radius: var(--radius);
+	height: auto;
+	h1 {
+		margin-top: 0;
+	}
+}
+
+footer {
+	padding: var(--gaps);
+	text-align: center;
+}
+
+
+a {
+	color: var(--color-mint);
+	text-decoration: none;
+
+	&:visited {
+		color: var(--color-mint);
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: var(--color-hot-pink);
+	}
+}
+
+/* misc */
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+img.spin {
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}

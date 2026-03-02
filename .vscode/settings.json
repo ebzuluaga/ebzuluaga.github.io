@@ -1,0 +1,15 @@
+{
+	/*Tabs*/
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": true,
+	"editor.tabSize": 4,
+	"editor.indentSize": "tabSize",
+	
+	// Nunjucks:
+	"files.associations": {
+		"*.html": "njk"
+	},
+	"emmet.includeLanguages": {
+		"njk": "html"
+	},
+}

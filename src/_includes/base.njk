@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {{ title if title else "My Site" }}
+        </title>
+        <link href="/styles.css" rel="stylesheet">
+        {% if page.fileSlug %}
+            <link rel="stylesheet" href="/{{ page.fileSlug }}.css">
+        {% endif %}
+        <script defer type="text/javascript" src="/script.js"></script>
+    </head>
+    <body>
+        {% include "nav.njk" %}
+        <main>
+            {{ content | safe }}
+        </main>
+        <footer>
+            Made by
+            <a href="https://github.com/ebzuluaga">Esteban Beodya</a>
+        </footer>
+    </body>
+</html>
