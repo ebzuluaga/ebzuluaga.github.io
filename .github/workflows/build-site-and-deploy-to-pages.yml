@@ -1,6 +1,7 @@
 name: 'Build site and publish to pages'
 on:
-  push: [main]
+  push: 
+    branches: main
 jobs:
   build: 
     runs-on: ubuntu-latest
