@@ -1,4 +1,4 @@
-name: Build site and publish to pages
+name: 'Build site and publish to pages'
 on:
   push: [main]
 jobs:
