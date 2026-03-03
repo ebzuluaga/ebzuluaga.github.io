@@ -14,8 +14,10 @@ jobs:
           node-version: 24
       - name: Setup pages
         uses: actions/configure-pages@v5
-      - name: Build static site with Eleventy
-        run: npx @11ty/eleventy
+      - name: Build static site
+        run: |
+          npm install
+          npm run build
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v4
