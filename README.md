@@ -5,7 +5,7 @@
 ## TODO
 
 - infrastructure
-  - configure the github actions/workflow
+  - ~~configure the github actions/workflow~~
   - make a mirror in gitlab.com
   - make a mirror in pages.dev
 - design
