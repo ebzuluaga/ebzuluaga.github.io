@@ -15,7 +15,7 @@
     <body>
         {% include "nav.njk" %}
         <main>
-            {{ content | safe }}
+        {% block content %}{{content | safe}}{% endblock %}
         </main>
         <footer>
             Made by

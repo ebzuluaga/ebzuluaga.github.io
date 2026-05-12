@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
 	--color-light: hsl(0, 0%, 90%);
 	--color-dark: hsl(0, 0%, 15%);
 	--color-hot-pink: #ff0077;
 	--color-violet: #9900ff;
-	--color-mint: #00FFAA;
-	--color-sky: #00AAFF;
-	--color-mandarine: #FFAA00;
+	--color-mint: #00ffaa;
+	--color-sky: #00aaff;
+	--color-mandarine: #ffaa00;
 	/*FA5*/
-	--color-banana: #FFEE00;
+	--color-banana: #ffee00;
 	--foreground: var(--color-light);
 	--background: var(--color-dark);
 	--background-secondary: hsl(0, 0%, 10%);
@@ -20,9 +21,9 @@
 
 	--gaps: 1rem;
 	--radius: var(--gaps);
-	--font-sans: 'Roboto Condensed', sans-serif;
-	--font-serif: 'Roboto Serif', serif;
-	--font-mono: 'Martian Mono','Martian Mono', monospace;
+	--font-sans: "Roboto Condensed", sans-serif;
+	--font-serif: "Roboto Serif", serif;
+	--font-mono: "Martian Mono", monospace;
 
 	--font-headings: var(--font-serif);
 	--font-default: var(--font-sans);
@@ -49,17 +50,31 @@ body {
 	padding: 0 var(--gaps);
 	display: flex;
 	flex-direction: column;
+	tab-size: 4;
 }
 
-pre, code {
+pre,
+code {
 	font-family: var(--font-mono);
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	font-weight: 300;
+	background-color: var(--background-secondary);
+	padding: calc(var(--gaps) * 0.25) calc(var(--gaps) * 0.3);
+	border-radius: calc(var(--gaps) * 0.4);
 }
+pre {
+	padding: calc(var(--gaps) * 0.5) calc(var(--gaps) * 0.8);
+	border-radius: calc(var(--gaps) * 0.5);
+	overflow-x: auto;
+	code {
+		padding: 0;
+	}
+}
+
 /* Utility */
 .animate {
 	/* transition: all 200ms ease; */
-	transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navbar {
@@ -76,17 +91,25 @@ pre, code {
 	.left .logo {
 		width: calc(var(--gaps) * 3);
 		height: calc(var(--gaps) * 3);
-		background: linear-gradient(.375turn, var(--color-mint) 0%, var(--color-violet));
+		background: linear-gradient(
+			0.375turn,
+			var(--color-mint) 0%,
+			var(--color-violet)
+		);
 		border-radius: 100vh;
 
 		&:hover {
-			transform: rotate(.5turn);
-			background: linear-gradient(.375turn, var(--color-hot-pink) 0%, var(--color-sky));
+			transform: rotate(0.5turn);
+			background: linear-gradient(
+				0.375turn,
+				var(--color-hot-pink) 0%,
+				var(--color-sky)
+			);
 		}
 	}
 
-
-	.left , .right {
+	.left,
+	.right {
 		display: flex;
 		align-items: stretch;
 		gap: var(--gaps);
@@ -149,23 +172,23 @@ pre, code {
 			}
 
 			&:nth-of-type(1) {
-				--accent: var(--color-hot-pink)
+				--accent: var(--color-hot-pink);
 			}
 
 			&:nth-of-type(2) {
-				--accent: var(--color-sky)
+				--accent: var(--color-sky);
 			}
 
 			&:nth-of-type(3) {
-				--accent: var(--color-mint)
+				--accent: var(--color-mint);
 			}
 
 			&:nth-of-type(4) {
-				--accent: var(--color-violet)
+				--accent: var(--color-violet);
 			}
 
 			a {
-				padding: var(--gaps)
+				padding: var(--gaps);
 			}
 		}
 	}
@@ -186,7 +209,6 @@ footer {
 	padding: var(--gaps);
 	text-align: center;
 }
-
 
 a {
 	color: var(--color-mint);
