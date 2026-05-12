@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base
 title: Home
 navlinks:
     - url: https://github.com/oldarkdesu/dots
