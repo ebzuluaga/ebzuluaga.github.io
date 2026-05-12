@@ -1,7 +1,7 @@
 ---
 tags:
-  - oslinux
-  - os
+  - os/linux
+  - guide
 ---
 # Installing the system
 
@@ -252,4 +252,3 @@ just some fun and cool programs
 - KDE: Arch meta packages for various KDE applications:
 	-  `kde-applications-meta` or, if you _don't_ want every single KDE program known to man:
 	-  `kde-{system,multimedia,office,utilities,graphics}-meta`
-

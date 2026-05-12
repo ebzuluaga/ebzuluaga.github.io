@@ -1,7 +1,7 @@
 /* FONTS: Martian Mono, Roboto Condensed, Roboto Serif */
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
@@ -61,6 +61,7 @@ code {
 	background-color: var(--background-secondary);
 	padding: calc(var(--gaps) * 0.25) calc(var(--gaps) * 0.3);
 	border-radius: calc(var(--gaps) * 0.4);
+	word-wrap: break-word;
 }
 pre {
 	padding: calc(var(--gaps) * 0.5) calc(var(--gaps) * 0.8);
@@ -241,4 +242,18 @@ img.spin {
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+}
+
+.blog_tag {
+	background-color: var(--foreground);
+	border: thin solid ;
+	color: var(--background);
+	padding: 0.1rem 0.5rem;
+	border-radius: 100vh;
+
+	&:hover{
+		background-color: var(--background);
+		border-color: var(--foreground);
+		color: var(--foreground);
+	}
 }

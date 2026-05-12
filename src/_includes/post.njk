@@ -1,5 +1,13 @@
 {% extends "base.njk" %}
 {% block content %}
-	<!--<p>post info here hurr durr</p>-->
+	{% if tags %}
+		Tags:
+		{% for t in tags %}
+		<span class="blog_tag">{{t}}</span>
+		{% endfor %}
+	{% else %}
+		(this post has no tags)
+	{% endif %}
+
 	{{content | safe}}
 {% endblock %}

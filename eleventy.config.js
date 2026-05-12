@@ -5,6 +5,8 @@ export default function (eleventyConfig) {
 
 	// copy necessary non-template files
 	eleventyConfig.addPassthroughCopy({ "src/public": "/" });
+
+	eleventyConfig.addGlobalData("layout", "base");
 }
 export const config = {
 	markdownTemplateEngine: "njk",

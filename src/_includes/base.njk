@@ -17,10 +17,6 @@
         <main>
         {% block content %}{{content | safe}}{% endblock %}
         </main>
-        <footer>
-            Made by
-            <a href="https://github.com/ebzuluaga">Esteban Beodya </a>.
-            Check out the <a href="https://github.com/ebzuluaga/ebzuluaga.github.io">repo</a>.
-        </footer>
+        {% include "footer.njk" %}
     </body>
 </html>
