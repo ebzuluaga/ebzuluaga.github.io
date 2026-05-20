@@ -2,6 +2,19 @@
 
 (there will be something written here in the future...)
 
+## Setup 
+
+```sh
+# clone the repo into the 'site' folder
+git clone 'https://github.com/ebzuluaga/ebzuluaga.github.io' ./site
+cd ./site
+node -v # ensure node is installed
+npm install # install packages
+npm start # Build static files and start a development server
+```
+
+If you don't have node installed you can find information on how to get it [here](https://nodejs.org/en/download).
+
 ## TODO
 
 - infrastructure

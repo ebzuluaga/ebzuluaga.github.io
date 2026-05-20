@@ -23,11 +23,17 @@ navlinks:
 I'm a _Systems (and telecomunications) Engineer_ , and an aspiring software developer/sysadmin.
 (This site is under construction...)
 
+## Socials
+
+- LinkedIn: [ebzuluaga](https://www.linkedin.com/in/ebzuluaga/)
+- GitHub: [ebzuluaga](https://github.com/ebzuluaga)
+- e-mail: [estebanbedoyazuluaga@gmail.com](mailto://estebanbedoyazuluaga@gmail.com)
+
 ## Some stuff I've done (mostly for university):
 
 <ul>
 	{%- for i in navlinks -%}
-		<li><a href="{{ i.url }}">{{ i.desc | safe }}</a></li>
+	<li><a href="{{ i.url }}">{{ i.desc | safe }}</a></li>
 	{%- endfor -%}
 </ul>
 
