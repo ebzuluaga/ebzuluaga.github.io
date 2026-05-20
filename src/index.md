@@ -19,7 +19,6 @@ showcase_links:
     - url: https://github.com/ebzuluaga/ebzuluaga.github.io
       desc: This very site
 ---
-
 # Hi, I'm Esteban
 
 I'm a _Systems (and telecomunications) Engineer_ , and an aspiring software developer/sysadmin.
