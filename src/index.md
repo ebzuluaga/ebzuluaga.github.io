@@ -1,7 +1,9 @@
 ---
 layout: base
 title: Home
-navlinks:
+showcase_links:
+    - url: /blog
+      desc: My personal blog (currently not available)
     - url: https://github.com/oldarkdesu/dots
       desc: "My personal <em>dotfiles</em>"
     - url: https://ergokeebs.vercel.app/
@@ -32,7 +34,7 @@ I'm a _Systems (and telecomunications) Engineer_ , and an aspiring software deve
 ## Some stuff I've done (mostly for university):
 
 <ul>
-	{%- for i in navlinks -%}
+	{%- for i in showcase_links -%}
 	<li><a href="{{ i.url }}">{{ i.desc | safe }}</a></li>
 	{%- endfor -%}
 </ul>
