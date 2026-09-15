@@ -1,6 +1,6 @@
 ---
-layout: base
 title: Home
+no_title: yes
 showcase_links:
     - url: /blog
       desc: My personal blog (currently not available)
@@ -19,9 +19,10 @@ showcase_links:
     - url: https://github.com/ebzuluaga/ebzuluaga.github.io
       desc: This very site
 ---
+
 # Hi, I'm Esteban
 
-I'm a _Systems (and telecomunications) Engineer_ , and an aspiring software developer/sysadmin.
+I'm a Systems <small>(and telecommunications)</small> Engineer , and an aspiring software developer/sysadmin.
 (This site is under construction...)
 
 ## Socials

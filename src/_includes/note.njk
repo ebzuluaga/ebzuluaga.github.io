@@ -1,0 +1,13 @@
+{% extends "./base.njk" %}
+{% block content %}
+	{% if topics %}
+		Tags:
+		{% for t in topics %}
+			<span class="blog_tag">{{t}}</span>
+		{% endfor %}
+	{% else %}
+		(this note has no tags)
+	{% endif %}
+
+	{{content | safe}}
+{% endblock %}

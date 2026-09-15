@@ -1,0 +1,9 @@
+---
+layout: base
+title: List of Notes
+---
+<ul>
+	{%- for n in collections.note -%}
+	  <li><a href="{{n.url}}">{{n.data.title}}</a></li>
+	{%- endfor -%}
+</ul>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title if title else site.host }}</title>
+
+	{# CSS #}
+	<link rel="stylesheet" href="/stylesheets/base.css">
+	{% auto_css page.filePathStem %}
+
+	{# JavaScript #}
+	<script defer src="/scripts/base.js"></script>
+	{% auto_js page.filePathStem %}
+
+</head>
+	<body>
+		{% block body %}
+			<!-- body is empty... -->
+		{% endblock %}
+	</body>
+</html>
