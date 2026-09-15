@@ -21,7 +21,7 @@ showcase_links:
 ---
 # Hi, I'm Esteban
 
-I'm a _Systems (and telecomunications) Engineer_ , and an aspiring software developer/sysadmin.
+I'm a Systems <small>(and telecommunications)</small> Engineer , and an aspiring software developer/sysadmin.
 (This site is under construction...)
 
 ## Socials

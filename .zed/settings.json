@@ -1,0 +1,16 @@
+{
+	"hard_tabs": true,
+	"tab_size": 4,
+	"file_types": {
+		"Nunjucks": ["html"],
+	},
+	"languages": {
+		"Nunjucks": {
+			"formatter": "language_server",
+		},
+	},
+	// Apparently this is not allowed :P
+	// "auto_install_extensions": {
+	// 	"nunjucks": true
+	// },
+}

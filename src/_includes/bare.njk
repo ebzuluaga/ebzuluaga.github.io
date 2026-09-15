@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="{{ eleventy.generator }}">
+	<title>{{ title if title else "My Site" }}</title>
+
+	{# stylesheets #}
+	<link href="/base_styles.css" rel="stylesheet">
+	{% set custom_stylesheets = page | get_custom_styles %}
+	{% for stylesheet in custom_stylesheets %}
+		<link rel="stylesheet" href="{{stylesheet | replace('./src', '')}}">
+	{% endfor %}
+
+	<script defer type="text/javascript" src="/base_script.js"></script>
+{#
+	{% if custom_scripts %}
+		<script defer type="text/javascript" src="{{ custom_scripts | replace('./src', '') }}"></script>
+	{% endif %}
+#}
+
+</head>
+<body>
+	{% block body %}
+	<!-- body is empty... -->
+	{% endblock %}
+</body>
+</html>
