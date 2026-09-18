@@ -1,4 +1,4 @@
-name: 'Build site and publish to pages'
+name: "Build site and publish to pages"
 on:
   push:
     branches: [main]
@@ -11,7 +11,7 @@ jobs:
       - name: Node setup
         uses: actions/setup-node@v7
         with:
-          node-version: lts
+          node-version: 26
       - name: Build static site
         run: |
           npm install
