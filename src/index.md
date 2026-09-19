@@ -29,7 +29,7 @@ I'm a Systems <small>(and telecommunications)</small> Engineer , and an aspiring
 
 - LinkedIn: [ebzuluaga](https://www.linkedin.com/in/ebzuluaga/)
 - GitHub: [ebzuluaga](https://github.com/ebzuluaga)
-- e-mail: [estebanbedoyazuluaga@gmail.com](mailto://estebanbedoyazuluaga@gmail.com)
+- e-mail: [esteban@bzuluaga.com](mailto://esteban@bzuluaga.com)
 
 ## Some stuff I've done (mostly for university):
 
