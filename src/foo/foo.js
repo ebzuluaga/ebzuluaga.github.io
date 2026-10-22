@@ -1,5 +1,4 @@
-console.log("hello from js!");
-document.querySelector("#output")
+document.querySelector("#output");
 if ("storage" in navigator && "estimate" in navigator.storage) {
 	navigator.storage.estimate().then(({ quota, usage, usageDetails }) => {
 		const quotaMB = (quota / 1024 / 1024).toFixed(2);

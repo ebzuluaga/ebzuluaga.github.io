@@ -31,6 +31,9 @@ export default function (eleventyConfig) {
 		}
 		return "";
 	});
+	eleventyConfig.setServerOptions({
+		showAllHosts: true,
+	})
 }
 
 export const config = {
