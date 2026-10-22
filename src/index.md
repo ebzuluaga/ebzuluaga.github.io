@@ -2,7 +2,7 @@
 title: Home
 no_title: yes
 showcase_links:
-    - url: flaskr.bzuluaga.com
+    - url: http://flaskr.bzuluaga.com
       desc: Tutorial app from Flask's official documentation
     - url: /blog
       desc: My personal blog (currently not available)
